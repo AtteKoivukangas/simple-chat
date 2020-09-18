@@ -1,0 +1,90 @@
+:root {
+  --main-bg-color: #F5F5F5;
+}
+
+body {
+  background: var(--main-bg-color);
+  word-wrap: break-word;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.message-display {
+  max-width: 800px;
+}
+
+.message-board {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.react-input {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#typing-label:empty:before {
+  content: "\200b";
+}
+
+#leave-room-button {
+  color: red;
+}
+
+#leave-room-button:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.header-background {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+}
+
+#notification {
+  background-color: rgb(179, 0, 0);
+  color: white;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .message-board { height: 60vh; }
+}
+
+@media (max-width: 1000px) {
+  #root { font-size: 20px }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .message-board { height: 70vh; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background: #f1f1f1; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
